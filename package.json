@@ -24,6 +24,7 @@
     "babel-cli": "^6.24.0",
     "babel-plugin-transform-class-properties": "^6.23.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.2.2",
     "babel-preset-react": "^6.23.0",
     "jsdom-quokka-plugin": "^1.0.0"
   }
