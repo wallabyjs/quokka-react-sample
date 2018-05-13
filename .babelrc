@@ -1,10 +1,16 @@
 {
-  "presets": [
-    "react",
-    "env"
-  ],
-  "plugins": [
-    "transform-class-properties",
-    "transform-object-rest-spread"
-  ]
+  "env": {
+    "development": {
+      "plugins": ["transform-flow-strip-types"],
+      "presets": ["next/babel"]
+    },
+    "production": {
+      "plugins": ["transform-flow-strip-types"],
+      "presets": ["next/babel"]
+    },
+    "test": {
+      "plugins": ["transform-flow-strip-types"],
+      "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]]
+    }
+  }
 }

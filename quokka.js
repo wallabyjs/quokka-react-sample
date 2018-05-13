@@ -1,19 +1,23 @@
-// The config also be placed into package.json or global quokka config,
-// see https://quokkajs.com/docs/configuration.html
 ({
-    babel: true,
-    plugins: ['jsdom-quokka-plugin']
-})
+  pro: true,
+  babel: true,
+  plugins: ['jsdom-quokka-plugin'],
+  env: {
+    params: {
+      env: 'BABEL_ENV=test',
+    },
+  },
+});
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+// @flow
+export function calculatePercent(
+  unixSecondsStart: number,
+  unixSecondsNow: number,
+  unixSecondsGoal: number,
+): number {
+  const totalSeconds = unixSecondsGoal - unixSecondsStart;
+  const leftSeconds = unixSecondsNow - unixSecondsStart;
+  return leftSeconds / totalSeconds * 100;
+}
 
-document.body.innerHTML += `<div id="root"></div>`;
-
-ReactDOM.render(
-<h1>Hello, world!</h1>,
-  document.getElementById('root')
-);
-
-const root = document.getElementById('root').innerHTML;
-root
+calculatePercent(1, 2, 3) //?
