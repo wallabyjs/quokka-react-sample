@@ -28,6 +28,6 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
-    "jsdom": "^16.2.2"
+    "jsdom": "^16.5.0"
   }
 }
